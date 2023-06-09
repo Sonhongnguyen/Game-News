@@ -6,21 +6,11 @@ body{
   background-attachment: fixed; 
   background-size: 100% 100%;
 }
-@media all and (max-width: 767px) {
- body {
-  background: #f4f4f4 !important;
-}
-}
-.top-bar{
-  background-color: #292929;
-}
-@media screen and (max-width: 768px){
-  .top-bar-desktop{
-    display: none;
-  }
-}
 @media screen and (min-width: 769px){
   .top-bar-mobile{
+    display: none;
+  }
+  .dropdown-nav{
     display: none;
   }
 }
@@ -29,11 +19,36 @@ body{
     display: none;
   }
 }
+@media screen and (max-width: 768px){
+  .top-bar-desktop{
+    display: none;
+  }
+  .nav-menu{
+    display: none;
+  }
+  .nav-menu-device{
+    display: none;
+  }
+}
+@media all and (max-width: 767px) {
+ body {
+  background: #f4f4f4 !important;
+}
+}
+.top-bar{
+  background-color: #292929;
+}
+@media screen and (max-width:414px){
+  ul.dropdown-menu.show{
+    left: -250%;
+    top: 125%;
+  }
+}
 @media screen and (max-width: 292px){
   .tb-menu>a>span{
     display: none;
   }
-}
+} 
 /*.fix {
   left: 0;
   max-width: 100%;
@@ -144,21 +159,6 @@ body{
    outline-style: none;     
    outline-width: 0; 
  }
- @media screen and (max-width: 768px){
-  .nav-menu{
-    display: none;
-  }
-}
-@media screen and (min-width: 769px){
-  .dropdown-nav{
-    display: none;
-  }
-}
-@media screen and (max-width: 768px){
-  .nav-menu-device{
-    display: none;
-  }
-} 
 .dropdown-nav{
   background-color: #2f3336;
   width: 100%;
@@ -544,6 +544,10 @@ h2{
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
+}
+button.back-to-top{
+  transition: 1s!important;
+  scroll-behavior: smooth!important;
 }
 #myBtn:hover {
   background-color: #111;
